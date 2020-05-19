@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="IMG/Full.svg" type="image/x-icon" />
+  <title>Full Apuestas | El mejor sitio de Apuestas</title>
+  <!-- Material Icon CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- Materialize CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
+  <!-- Your custom styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Used as an example only to position the footer at the end of the page.
+    You can delete these styles or move it to your custom css file -->
+  <style>
+    @font-face {
+      font-family: baloo-medium;
+      src: url(Font/BalooPaaji2-Medium.ttf);
+      font-weight: normal;
+    }
+
+    @font-face {
+      font-family: baloo-bold;
+      src: url(Font/BalooPaaji2-Bold.ttf);
+      font-weight: bold;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      font-family: baloo-medium;
+      font-weight: normal;
+    }
+
+    main {
+      flex: 1 0 auto;
+    }
+
+    .Full {
+      background-color: #2c3e50;
+      /* color: #2c3e50; */
+    }
+
+    .letter {}
+
+    nav .brand-logo {
+      padding: 5px;
+    }
+
+    nav i.material-icons {
+      margin-left: -20px;
+      font-size: 30px;
+      font-weight: 500;
+      padding-right: 5px;
+      /* width: 50px; */
+    }
+
+    nav .button-collapse2 {
+      float: right;
+      position: relative;
+      z-index: 1;
+      height: 56px;
+      margin: 0 18px;
+    }
+
+    .container {
+      width: 100%;
+      margin-bottom: 10px;
+
+    }
+
+    .box__container__botton, .box__subcontainer__botton {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      overflow-x: scroll;
+    }
+    .box__subcontainer__botton{
+      width: 75%;
+      /* background: linear-gradient(to right , black 0, white 10%, white 90%, black 100%); */
+    }
+    .box__botton {
+      width: 30%;
+      text-align: center;
+      margin: 0 5px;
+      padding: 10px 15px;
+      /* background-color: #2c3e50; */
+      background: linear-gradient(to right, #515c67 0%, #515c67 20%, #415162 80%, #415162 100%);
+      border-radius: 0 0 10px 10px;
+    }
+    .sub__box__botton{
+      margin: 0 5px;
+      padding: 0px 15px;
+      
+    }
+    .select{
+      border-bottom: 2px solid #e74c3c;
+    }
+    li .sub__botton_imagen{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid #e74c3c;
+    }
+    ul,
+    li {
+      display: inline-block;
+    }
+
+    .box__flex {
+      width: 100%;
+      max-height: 65vh;
+      overflow: scroll;
+    }
+
+    .box__container__league {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box__macth {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      border-top: 1px solid #e74c3c;
+      /* border-bottom: 1px solid orangered; */
+    }
+
+    .box__date__complete {
+      display: block;
+      margin: 0 auto;
+      font-size: 0.7em;
+    }
+
+    .macth {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .date__macth {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* border-right: 1px solid orange; */
+      padding-right: 5px;
+      font-size: .8em;
+    }
+
+    .team__home,
+    .team__visit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      font-size: .8em;
+    }
+
+    .fight {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .teams {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .team__home__escudo,
+    .team__visit__escudo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 10px;
+    }
+
+    .apuesta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .rondas{
+      width: 90%;
+      margin: 10px auto;
+      display: flex;
+      justify-content: space-around;
+    }
+    button {
+        width: 90%;
+        height: 50px;
+        margin-top: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.397);
+        text-align: center;
+        border-radius: 15px;
+        background-color: #2c3e50;
+        color: white;
+        font-size: 1em;
+        font-weight: Medium;
+        letter-spacing: 3px;
+      }
+      .bet__match{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5px;
+        margin-bottom: 10px;
+
+      }
+      input[type="radio"]{
+        width: 50px;
+      }
+      input[type="checkbox"]{
+      
+      }
+      .btn__bets{
+        padding: 5px;
+        color: tomato;
+        background:none;
+        border:1px solid tomato;
+        border-radius: 5px;
+        width: 90px;
+        height: 40px;
+        letter-spacing: 0;
+        cursor: pointer;
+      }
+  </style>
+</head>
+
+<body>
+  <!-- <header>
+      <nav class="Full">
+        <div class="nav-wrapper">
+          <div class="container">
+            <a href="#" class="brand-logo"
+              ><img
+                src="IMG/Full blanco.png"
+                alt=""
+                class="hide-on-large-only"
+                width="55px" />
+              <img
+                src="IMG/Full.png"
+                alt=""
+                class="hide-on-med-and-down"
+                width="60px"
+            /></a>
+
+            <a href="#" data-activates="mobile-menu" class="button-collapse"
+              ><i class="material-icons">menu</i></a
+            >
+            <a href="#" data-activates="mobile-menu" class="button-collapse2"
+              ><i class="material-icons">search</i></a
+            >
+
+            <a href="#" data-activates="mobile-menu" class="button-collapse2"
+              ><i class="material-icons">notifications_active</i></a
+            >
+            <!-- <span>nombre de usuario</span> -->
+
+  <!-- <ul class="right hide-on-med-and-down pr50">
+              <li><a href="#">Mis Apuestas</a></li>
+              <li><a href="#">Cuenta</a></li>
+              <li><a href="#">Politicas</a></li>
+              <li><a href="#">Salir</a></li>
+            </ul>
+            <ul class="side-nav Full" id="mobile-menu">
+              <li>
+                <div class="userView">
+                  <div class="background"></div>
+                  <a href="#!user"
+                    ><img
+                      class="circle"
+                      src="http://lorempixel.com/output/people-q-c-640-480-9.jpg"
+                      alt="User Image Sidenav"
+                  /></a>
+                  <a href="#!name"
+                    ><span class="white-text name">Sebastian velasquez</span></a
+                  >
+                  <a href="#!email"
+                    ><span class="white-text email"
+                      >scvelasquezc@gmail.com</span
+                    ></a
+                  >
+                </div>
+              </li>
+              <li><a class="white-text" href="#">Cuenta</a></li>
+              <li><a class="white-text" href="#">Apuestas</a></li>
+              <li><a class="white-text" href="#">Favoritos</a></li>
+              <li><a class="white-text" href="#">Politicas</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header> -->
+  <main>
+    <div class="container">
+      <div class="box__container">
+        <div class="box__container__botton">
+          <li class="box__botton" style="list-style-type: none;"><a href="#">
+              <img class="botton__imagen" src="IMG/tools-solid.svg" alt="" width="40px" rcset="">
+            </a></li>
+          <li class="box__botton" style="list-style-type: none;"><a href="#">
+              <img class="botton__imagen" src="IMG/Recurso 3.svg" alt="" width="40px" rcset="">
+            </a></li>
+          <li class="box__botton" style="list-style-type: none;"><a href="#">
+              <img class="botton__imagen" src="IMG/beisbol.svg" alt="" width="40px" rcset="">
+            </a></li>
+          <li class="box__botton" style="list-style-type: none;"><a href="#">
+              <img class="botton__imagen" src="IMG/tools-solid.svg" alt="" width="40px" rcset="">
+            </a></li>
+          <li class="box__botton" style="list-style-type: none;"><a href="#">
+              <img class="botton__imagen" src="IMG/tools-solid.svg" alt="" width="40px" rcset="">
+            </a></li>
+          <li class="box__botton" style="list-style-type: none;"><a href="#">
+              <img class="botton__imagen" src="IMG/tools-solid.svg" alt="" width="50px" rcset="">
+            </a></li>
+          <li class="box__botton" style="list-style-type: none;"><a href="#">
+              <img class="botton__imagen" src="IMG/tools-solid.svg" alt="" width="50px" rcset="">
+            </a></li>
+          <li class="box__botton" style="list-style-type: none;"><a href="#">
+              <img class="botton__imagen" src="IMG/tools-solid.svg" alt="" width="50px" rcset="">
+            </a></li>
+          <li class="box__botton" style="list-style-type: none;"><a href="#">
+              <img class="botton__imagen" src="IMG/tools-solid.svg" alt="" width="50px" rcset="">
+            </a></li>
+          <li class="box__botton" style="list-style-type: none;"><a href="#">
+              <img class="botton__imagen" src="IMG/tools-solid.svg" alt="" width="50px" rcset="">
+            </a></li>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="box__subcontainer__botton">
+        <li class="sub__box__botton select" style="list-style-type: none;"><a href="#">
+          <img class="sub__botton__imagen" src="IMG/00-Liga-MX-Logo-512-x-512px.png" alt="" width="40px" rcset="">
+        </a></li>
+        <li class="sub__box__botton" style="list-style-type: none;"><a href="#">
+          <img class="sub__botton__imagen" src="IMG/00-Liga-MX-Logo-512-x-512px.png" alt="" width="40px" rcset="">
+        </a></li>
+        <li class="sub__box__botton" style="list-style-type: none;"><a href="#">
+          <img class="sub__botton__imagen" src="IMG/00-Liga-MX-Logo-512-x-512px.png" alt="" width="40px" rcset="">
+        </a></li>
+        <li class="sub__box__botton" style="list-style-type: none;"><a href="#">
+          <img class="sub__botton__imagen" src="IMG/00-Liga-MX-Logo-512-x-512px.png" alt="" width="40px" rcset="">
+        </a></li>
+        <li class="sub__box__botton" style="list-style-type: none;"><a href="#">
+          <img class="sub__botton__imagen" src="IMG/00-Liga-MX-Logo-512-x-512px.png" alt="" width="40px" rcset="">
+        </a></li>
+        <li class="sub__box__botton" style="list-style-type: none;"><a href="#">
+          <img class="sub__botton__imagen" src="IMG/00-Liga-MX-Logo-512-x-512px.png" alt="" width="40px" rcset="">
+        </a></li><li class="sub__box__botton" style="list-style-type: none;"><a href="#">
+          <img class="sub__botton__imagen" src="IMG/00-Liga-MX-Logo-512-x-512px.png" alt="" width="40px" rcset="">
+        </a></li><li class="sub__box__botton" style="list-style-type: none;"><a href="#">
+          <img class="sub__botton__imagen" src="IMG/00-Liga-MX-Logo-512-x-512px.png" alt="" width="40px" rcset="">
+        </a></li>
+      </div>
+    </div>
+    <div class="container rondas">
+      <div style="color: coral;">round 1</div>
+      <div>round 2</div>
+      <div>round 3</div>
+      <div>round 4</div>
+      <div>round 5</div>
+    </div>
+    <div class="container box__flex">
+      
+      <div class="box__container__league">
+        <!-- <div class="box__round">
+          round
+        </div> -->
+        <div class="box__macth">
+          <div class="box__date__complete">
+            <!-- <p class="date">21/25/2020</p> -->
+          </div>
+          <div class="macth">
+            <div class="date__macth">
+              <p class="">15:50</p>
+              <!-- <p class="date">Hoy</p> -->
+            </div>
+            <div class="team__home">
+              <div class="team__home__name">
+                Bar
+              </div>
+            </div>
+            <div class="fight">
+              <div class="box__date__complete">
+                <p class="date">21/25/2020</p>
+              </div>
+              <div class="teams">
+                <div class="team__home__escudo">
+                  <img src="IMG/ubuntu.png" alt="" width="25px">
+                </div>
+                vs
+                <div class="team__visit__escudo">
+                  <img src="IMG/shield.png" alt="" width="25px">
+                </div>
+              </div>
+              
+            </div>
+            <div class="team__visit">
+              <div class="team__visit__name">
+                Rmd
+              </div>
+            </div>
+            <div class="apuesta">
+              <img src="IMG/check-circle-solid.svg" alt="" width="25px">
+            </div>
+          </div>
+          <div class="bet__match">
+              <button class="btn__bets" type="submit">Apostar</button>
+              <input type="radio" name="bet__match" id="" value="winHome">
+              <input type="radio" name="bet__match" id="" value="deude">
+              <input type="radio" name="bet__match" id="" value="winVisit">
+          </div>
+        </div>
+      </div>
+      <div class="box__container__league">
+        <!-- <div class="box__round">
+          round
+        </div> -->
+        <div class="box__macth">
+          <div class="box__date__complete">
+            <!-- <p class="date">21/25/2020</p> -->
+          </div>
+          <div class="macth">
+            <div class="date__macth">
+              <p class="">15:50</p>
+              <!-- <p class="date">Hoy</p> -->
+            </div>
+            <div class="team__home">
+              <div class="team__home__name">
+                Bar
+              </div>
+            </div>
+            <div class="fight">
+              <div class="teams">
+                <div class="team__home__escudo">
+                  <img src="IMG/ubuntu.png" alt="" width="25px">
+                </div>
+                vs
+                <div class="team__visit__escudo">
+                  <img src="IMG/shield.png" alt="" width="25px">
+                </div>
+              </div>
+              <div class="box__date__complete">
+                <p class="date">21/25/2020</p>
+              </div>
+            </div>
+            <div class="team__visit">
+              <div class="team__visit__name">
+                Rmd
+              </div>
+            </div>
+            <div class="apuesta">
+              <img src="IMG/check-circle-solid.svg" alt="" width="25px">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box__container__league">
+        <!-- <div class="box__round">
+          round
+        </div> -->
+        <div class="box__macth">
+          <div class="box__date__complete">
+            <!-- <p class="date">21/25/2020</p> -->
+          </div>
+          <div class="macth">
+            <div class="date__macth">
+              <p class="">15:50</p>
+              <!-- <p class="date">Hoy</p> -->
+            </div>
+            <div class="team__home">
+              <div class="team__home__name">
+                Bar
+              </div>
+            </div>
+            <div class="fight">
+              <div class="teams">
+                <div class="team__home__escudo">
+                  <img src="IMG/ubuntu.png" alt="" width="25px">
+                </div>
+                vs
+                <div class="team__visit__escudo">
+                  <img src="IMG/shield.png" alt="" width="25px">
+                </div>
+              </div>
+              <div class="box__date__complete">
+                <p class="date">21/25/2020</p>
+              </div>
+            </div>
+            <div class="team__visit">
+              <div class="team__visit__name">
+                Rmd
+              </div>
+            </div>
+            <div class="apuesta">
+              <img src="IMG/check-circle-solid.svg" alt="" width="25px">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box__container__league">
+        <!-- <div class="box__round">
+          round
+        </div> -->
+        <div class="box__macth">
+          <div class="box__date__complete">
+            <!-- <p class="date">21/25/2020</p> -->
+          </div>
+          <div class="macth">
+            <div class="date__macth">
+              <p class="">15:50</p>
+              <!-- <p class="date">Hoy</p> -->
+            </div>
+            <div class="team__home">
+              <div class="team__home__name">
+                Bar
+              </div>
+            </div>
+            <div class="fight">
+              <div class="teams">
+                <div class="team__home__escudo">
+                  <img src="IMG/ubuntu.png" alt="" width="25px">
+                </div>
+                vs
+                <div class="team__visit__escudo">
+                  <img src="IMG/shield.png" alt="" width="25px">
+                </div>
+              </div>
+              <div class="box__date__complete">
+                <p class="date">21/25/2020</p>
+              </div>
+            </div>
+            <div class="team__visit">
+              <div class="team__visit__name">
+                Rmd
+              </div>
+            </div>
+            <div class="apuesta">
+              <img src="IMG/check-circle-solid.svg" alt="" width="25px">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box__container__league">
+        <!-- <div class="box__round">
+          round
+        </div> -->
+        <div class="box__macth">
+          <div class="box__date__complete">
+            <!-- <p class="date">21/25/2020</p> -->
+          </div>
+          <div class="macth">
+            <div class="date__macth">
+              <p class="">15:50</p>
+              <!-- <p class="date">Hoy</p> -->
+            </div>
+            <div class="team__home">
+              <div class="team__home__name">
+                Bar
+              </div>
+            </div>
+            <div class="fight">
+              <div class="teams">
+                <div class="team__home__escudo">
+                  <img src="IMG/ubuntu.png" alt="" width="25px">
+                </div>
+                vs
+                <div class="team__visit__escudo">
+                  <img src="IMG/shield.png" alt="" width="25px">
+                </div>
+              </div>
+              <div class="box__date__complete">
+                <p class="date">21/25/2020</p>
+              </div>
+            </div>
+            <div class="team__visit">
+              <div class="team__visit__name">
+                Rmd
+              </div>
+            </div>
+            <div class="apuesta">
+              <img src="IMG/check-circle-solid.svg" alt="" width="25px">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box__container__league">
+        <!-- <div class="box__round">
+          round
+        </div> -->
+        <div class="box__macth">
+          <div class="box__date__complete">
+            <!-- <p class="date">21/25/2020</p> -->
+          </div>
+          <div class="macth">
+            <div class="date__macth">
+              <p class="">15:50</p>
+              <!-- <p class="date">Hoy</p> -->
+            </div>
+            <div class="team__home">
+              <div class="team__home__name">
+                Bar
+              </div>
+            </div>
+            <div class="fight">
+              <div class="teams">
+                <div class="team__home__escudo">
+                  <img src="IMG/ubuntu.png" alt="" width="25px">
+                </div>
+                vs
+                <div class="team__visit__escudo">
+                  <img src="IMG/shield.png" alt="" width="25px">
+                </div>
+              </div>
+              <div class="box__date__complete">
+                <p class="date">21/25/2020</p>
+              </div>
+            </div>
+            <div class="team__visit">
+              <div class="team__visit__name">
+                Rmd
+              </div>
+            </div>
+            <div class="apuesta">
+              <img src="IMG/check-circle-solid.svg" alt="" width="25px">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box__container__league">
+        <!-- <div class="box__round">
+          round
+        </div> -->
+        <div class="box__macth">
+          <div class="box__date__complete">
+            <!-- <p class="date">21/25/2020</p> -->
+          </div>
+          <div class="macth">
+            <div class="date__macth">
+              <p class="">15:50</p>
+              <!-- <p class="date">Hoy</p> -->
+            </div>
+            <div class="team__home">
+              <div class="team__home__name">
+                Bar
+              </div>
+            </div>
+            <div class="fight">
+              <div class="teams">
+                <div class="team__home__escudo">
+                  <img src="IMG/ubuntu.png" alt="" width="25px">
+                </div>
+                vs
+                <div class="team__visit__escudo">
+                  <img src="IMG/shield.png" alt="" width="25px">
+                </div>
+              </div>
+              <div class="box__date__complete">
+                <p class="date">21/25/2020</p>
+              </div>
+            </div>
+            <div class="team__visit">
+              <div class="team__visit__name">
+                Rmd
+              </div>
+            </div>
+            <div class="apuesta">
+              <img src="IMG/check-circle-solid.svg" alt="" width="25px">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box__container__league">
+        <!-- <div class="box__round">
+          round
+        </div> -->
+        <div class="box__macth">
+          <div class="box__date__complete">
+            <!-- <p class="date">21/25/2020</p> -->
+          </div>
+          <div class="macth">
+            <div class="date__macth">
+              <p class="">15:50</p>
+              <!-- <p class="date">Hoy</p> -->
+            </div>
+            <div class="team__home">
+              <div class="team__home__name">
+                Bar
+              </div>
+            </div>
+            <div class="fight">
+              <div class="teams">
+                <div class="team__home__escudo">
+                  <img src="IMG/ubuntu.png" alt="" width="25px">
+                </div>
+                vs
+                <div class="team__visit__escudo">
+                  <img src="IMG/shield.png" alt="" width="25px">
+                </div>
+              </div>
+              <div class="box__date__complete">
+                <p class="date">21/25/2020</p>
+              </div>
+            </div>
+            <div class="team__visit">
+              <div class="team__visit__name">
+                Rmd
+              </div>
+            </div>
+            <div class="apuesta">
+              <img src="IMG/check-circle-solid.svg" alt="" width="25px">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box__container__league">
+        <!-- <div class="box__round">
+          round
+        </div> -->
+        <div class="box__macth">
+          <div class="box__date__complete">
+            <!-- <p class="date">21/25/2020</p> -->
+          </div>
+          <div class="macth">
+            <div class="date__macth">
+              <p class="">15:50</p>
+              <!-- <p class="date">Hoy</p> -->
+            </div>
+            <div class="team__home">
+              <div class="team__home__name">
+                Bar
+              </div>
+            </div>
+            <div class="fight">
+              <div class="teams">
+                <div class="team__home__escudo">
+                  <img src="IMG/ubuntu.png" alt="" width="25px">
+                </div>
+                vs
+                <div class="team__visit__escudo">
+                  <img src="IMG/shield.png" alt="" width="25px">
+                </div>
+              </div>
+              <div class="box__date__complete">
+                <p class="date">21/25/2020</p>
+              </div>
+            </div>
+            <div class="team__visit">
+              <div class="team__visit__name">
+                Rmd
+              </div>
+            </div>
+            <div class="apuesta">
+              <img src="IMG/check-circle-solid.svg" alt="" width="25px">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box__container__league">
+        <!-- <div class="box__round">
+          round
+        </div> -->
+        <div class="box__macth">
+          <div class="box__date__complete">
+            <!-- <p class="date">21/25/2020</p> -->
+          </div>
+          <div class="macth">
+            <div class="date__macth">
+              <p class="">15:50</p>
+              <!-- <p class="date">Hoy</p> -->
+            </div>
+            <div class="team__home">
+              <div class="team__home__name">
+                Bar
+              </div>
+            </div>
+            <div class="fight">
+              <div class="teams">
+                <div class="team__home__escudo">
+                  <img src="IMG/ubuntu.png" alt="" width="25px">
+                </div>
+                vs
+                <div class="team__visit__escudo">
+                  <img src="IMG/shield.png" alt="" width="25px">
+                </div>
+              </div>
+              <div class="box__date__complete">
+                <p class="date">21/25/2020</p>
+              </div>
+            </div>
+            <div class="team__visit">
+              <div class="team__visit__name">
+                Rmd
+              </div>
+            </div>
+            <div class="apuesta">
+              <img src="IMG/check-circle-solid.svg" alt="" width="25px">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box__container__league">
+        <!-- <div class="box__round">
+          round
+        </div> -->
+        <div class="box__macth">
+          <div class="box__date__complete">
+            <!-- <p class="date">21/25/2020</p> -->
+          </div>
+          <div class="macth">
+            <div class="date__macth">
+              <p class="">15:50</p>
+              <!-- <p class="date">Hoy</p> -->
+            </div>
+            <div class="team__home">
+              <div class="team__home__name">
+                Bar
+              </div>
+            </div>
+            <div class="fight">
+              <div class="teams">
+                <div class="team__home__escudo">
+                  <img src="IMG/ubuntu.png" alt="" width="25px">
+                </div>
+                vs
+                <div class="team__visit__escudo">
+                  <img src="IMG/shield.png" alt="" width="25px">
+                </div>
+              </div>
+              <div class="box__date__complete">
+                <p class="date">21/25/2020</p>
+              </div>
+            </div>
+            <div class="team__visit">
+              <div class="team__visit__name">
+                Rmd
+              </div>
+            </div>
+            <div class="apuesta">
+              <img src="IMG/check-circle-solid.svg" alt="" width="25px">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="rondas">
+      <button type="submit">
+        Confirmar Apuestas
+      </button>
+    </div>
+    
+  </main>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <!-- Materialize JS CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script>
+    $("document").ready(function () {
+      $(".button-collapse").sideNav();
+    });
+  </script>
+</body>
+
+</html>

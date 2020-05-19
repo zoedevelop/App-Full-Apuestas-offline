@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="IMG/Full.svg" type="image/x-icon" />
+    <title>Favoritos | Full Apuestas</title>
+    <style>
+        @font-face {
+            font-family: baloo-medium;
+            src: url(Font/BalooPaaji2-Medium.ttf);
+            font-weight: medium;
+        }
+
+        @font-face {
+            font-family: baloo-bold ;
+            src: url(Font/BalooPaaji2-Bold.ttf);
+            font-weight: bold;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-width: 100vw;
+            min-height: 100vh;
+            background: url("IMG/02.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+            font-family: baloo-medium;
+            font-size: 16px;
+            font-weight: lighter;
+        }
+
+        .container {
+            width: 90%;
+            min-height: 100vh;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            position: relative;
+        }
+
+        .politicas {
+            position: absolute;
+            top: 16px;
+            right: 5px;
+            text-align: right;
+        }
+
+        .logo {
+            position: relative;
+            margin: 10px auto;
+        }
+
+        .favoritos__box {
+            width: 90%;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1em;
+            position: relative;
+        }
+
+        .favoritos__box__list {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            background-color: #2c3e50;
+            color: white;
+            font-family: baloo-medium;
+            font-size: 1em;
+            font-weight: Medium;
+            letter-spacing: 3px;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .favoritos__box__list__content {
+            width: 100%;
+            max-height: 45vh;
+            position: relative;
+            top: -20px;
+            padding: 30px 10px;
+            background: rgb(0, 26, 51, .7);
+            opacity: 1;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            overflow: scroll;
+        }
+
+        .favoritos__box__list_categoria {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 99;
+        }
+
+        .Box__categoria, .Box__sub__categoria {
+            width: 100%;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 99;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+        }
+
+        .favoritos__box__list__subcategoria {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 5px 0;
+            position: relative;
+            z-index: 99;
+        }
+
+        .favotitos__box_subcaterogia {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+            position: relative;
+            z-index: 99;
+        }
+
+        .name__categoria, .sub__name__categoria {
+            font-family: baloo-bold;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        .space{
+            width: 13px;
+            height: 13px;
+        }
+        .name__subcategoria{
+            font-family: baloo-medium;
+            font-weight: normal;
+        }
+        .none{
+            display: none;
+        }
+
+        .login__group {
+        /* text-align: center; */
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    form{
+        width: 90%;
+        margin: 0 auto;
+    }
+    button {
+        width: 100%;
+        height: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.397);
+        text-align: center;
+        border-radius: 15px;
+        background-color: #2c3e50;
+        color: white;
+        font-family: baloo-medium;
+        font-size: 1em;
+        font-weight: normal;
+        letter-spacing: 3px;
+    }
+    .credits__box{
+        margin: 0 auto;
+        text-align: center;
+        font-size: .6em;
+        padding: 5px;
+        color:lightcyan;
+        position: relative;
+        bottom: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="politicas">
+            <img src="IMG/FullBlanco.png" alt="" width="20px" />
+        </div>
+        <div class="logo">
+            <img src="IMG/Full.svg" alt="" width="80px" />
+        </div>
+        <div class="favoritos__box">
+            <div class="favoritos__box__list">
+                Elige Tus Favoritos
+            </div>
+            <div class="favoritos__box__list__content">
+                <div class="favoritos__box__list_categoria">
+                    <div class="Box__categoria">
+                        <div class="name__categoria">
+                            Futbol
+                        </div>
+                        <div class="subcategoria__show">
+                            +
+                        </div>
+                    </div>
+                    <div class="favoritos__box__list__subcategoria ">
+                        <div class="Box__sub__categoria">
+                            <div class="categoria__check">
+                                <input type="checkbox" name="Alemania" id="">
+                            </div>
+                            <div class="sub__name__categoria">
+                                Bundesliga
+                            </div>
+                            <div class="subcategoria__show">
+                                +
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Box__categoria">
+                        <div class="name__categoria">
+                            Beisbol
+                        </div>
+                        <div class="subcategoria__show">
+                            +
+                        </div>
+                    </div>
+                    <div class="favoritos__box__list__subcategoria ">
+                        <div class="Box__sub__categoria">
+                            <div class="categoria__check">
+                                <input type="checkbox" name="Alemania" id="">
+                            </div>
+                            <div class="sub__name__categoria">
+                                Liga Mundial
+                            </div>
+                            <div class="subcategoria__show">
+                                +
+                            </div>
+                        </div>
+                        <div class="favotitos__box_subcaterogia">
+                            <div class="space">
+                                
+                            </div>
+                            <div class="subcategoria">
+                                The Yankies
+                            </div>
+                            <div class="choose_subcategoria">
+                                <input type="checkbox" name="Borussia Dormund" id="">
+                            </div>
+                        </div>
+                        <div class="favotitos__box_subcaterogia">
+                            <div class="space">
+                                
+                            </div>
+                            <div class="subcategoria">
+                                Los marints
+                            </div>
+                            <div class="choose_subcategoria">
+                                <input type="checkbox" name="Borussia Dormund" id="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Box__categoria">
+                        <div class="name__categoria">
+                            Futbol
+                        </div>
+                        <div class="subcategoria__show">
+                            +
+                        </div>
+                    </div>
+                    <div class="Box__categoria">
+                        <div class="name__categoria">
+                            Futbol
+                        </div>
+                        <div class="subcategoria__show">
+                            +
+                        </div>
+                    </div>
+                    <div class="Box__categoria">
+                        <div class="name__categoria">
+                            Futbol
+                        </div>
+                        <div class="subcategoria__show">
+                            +
+                        </div>
+                    </div>
+                    <div class="Box__categoria">
+                        <div class="name__categoria">
+                            Futbol
+                        </div>
+                        <div class="subcategoria__show">
+                            +
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form action="index.html" method="get">
+            <button class="login__group" type="submit">Guardar</button>
+            <button class="login__group" type="submit">Omitir</button>
+        </form>
+        <footer>
+            <div class="credits__box">
+                @Copyrhigth 2020 Fundación Universotaria Los Libertadores
+            </div>
+        </footer>
+    </div>  
+    
+    
+</body>
+
+</html>
